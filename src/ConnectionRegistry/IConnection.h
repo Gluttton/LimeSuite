@@ -173,12 +173,12 @@ public:
     virtual int BeginDataSending(const char* buffer, uint32_t length, int ep);
     virtual bool WaitForSending(int contextHandle, uint32_t timeout_ms);
     virtual int FinishDataSending(const char* buffer, uint32_t length, int contextHandle);
-    virtual void AbortSending(int ep){};
+    virtual void AbortSending(int /*ep*/){};
 
     virtual int BeginDataReading(char* buffer, uint32_t length, int ep);
     virtual bool WaitForReading(int contextHandle, unsigned int timeout_ms);
     virtual int FinishDataReading(char* buffer, uint32_t length, int contextHandle, host_time_t * ht = nullptr);
-    virtual void AbortReading(int ep){};
+    virtual void AbortReading(int /*ep*/){};
 
     /***********************************************************************
      * Programming API
